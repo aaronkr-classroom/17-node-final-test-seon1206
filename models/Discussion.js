@@ -1,3 +1,5 @@
+models - Discussion.js
+
 // models/Discussion.js
 "use strict";
 
@@ -22,6 +24,7 @@ const mongoose = require("mongoose"),
       views: { type: Number, default: 0 },
       category: { type: String },
       tags: [String],
+      users: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }] 
     },
     {
       timestamps: true,
